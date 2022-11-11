@@ -1,6 +1,9 @@
-import Example from "./scripts/example";
+// import Example from "./scripts/example";
 
 document.addEventListener("DOMContentLoaded", () => {
-    const main = document.getElementById("main");
-    new Example(main);
+    const canvasGame= document.getElementById('gameCanvas');
+    const ctxGame= canvasGame.getContext("2d");
+    
+  
 });
+

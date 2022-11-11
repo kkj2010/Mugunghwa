@@ -5,13 +5,47 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://kit.fontawesome.com/ac047c5fc5.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./dist/main.css" />
-    <script src="./dist/main.js"></script>
-    <title>Project Name</title>
+    <script src="./dist/main.js" defer></script>  
+    <title>Moogoonghwa</title>
   </head>
 
+<!-- defer안쓰면 script가 html 준비되기 이전에 실행됨. or window on load listener 쓰기-->
+
   <body>
-      <div id="main"></div>
-  </body>
+    <div class="whole-layout">
+
+      <div class="left-container">
+        <div class="char-image"></div>
+        <div class="left-inside-container">
+          <button class="linkedin_button"></button>
+          <button class="github_button"></button>
+          <button class="mute_music"></button>
+        </div>
+      </div>
+
+      <canvas id="gameCanvas" width="500" height="700"></canvas>
+     
+
+      <div class="right-container">
+        <div class="char-image"></div>
+        <div class="right-inside-container">
+          <button class="game_button">
+            <i class="fa-thin fa-circle-play"></i>
+          </button>
+          <button class="reward_button">9</button>
+          <button class="timer_button">0:0</button>
+        </div>
+      </div>
+  </div>
+
+    <section class="pop-up pop-up-hide">
+      <button class="pop-up-refresh">
+      <i class="fa-sharp fa-solid fa-rotate-right"></i>
+      </button>
+      <span class="pop-up-message">Are you sure want to play?</span>
+    </section>
+</body>
 
 </html>
