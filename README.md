@@ -20,6 +20,9 @@ Your goal is to get your player to the finish line. The "it" person will stand a
 * CSS for styling
 * Webpack
 
+## Wireframe
+![This is an image](wire.png)
+
 ## Implementation Timeline
 * 11/11- 11/13
 - [ ] Research Canvas and make a project skeleton
