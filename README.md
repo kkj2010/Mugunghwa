@@ -27,12 +27,16 @@ Your goal is to get your player to the finish line. The "it" person will stand a
 * 11/11- 11/13
 - [ ] Research Canvas and make a project skeleton
 - [ ] Collect images will be used
+- [ ] Set characters movement- player & reward at main game area
 
 * 11/14
-- [ ] Create map, character, and other objects
+- [ ] Add functions for the robot girl
+- [ ] Set up music
+- [ ] Set the layout of top and bottom
 
 * 11/15
-- [ ] Add players movement and timer/light/music etc
+- [ ] Pop up 
+- [ ] Create buttons at side & light
 
 * 11/16
 - [ ] Add links, instructions, and other functionality to game website

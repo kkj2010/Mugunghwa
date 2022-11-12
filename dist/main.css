@@ -11,9 +11,8 @@ body{
 
 #gameCanvas{
     background-color: white;
-    margin:auto;
+    margin:20px;
     border-radius: 20px;
-   
 }
 
 .whole-layout{
@@ -30,6 +29,7 @@ body{
  border: 3px solid white;
  border-radius: 20px;
  font-size: 20px;
+ margin-top: 20px;
 }
 
 .game_button, .timer_button,.reward_button,.linkedin_button,.github_button,.mute_music{
@@ -72,6 +72,7 @@ body{
  width: 100;
  height: 300;
  border-radius: 20px;
+ margin-top: 20px;
 }
 
 .pop-up{
