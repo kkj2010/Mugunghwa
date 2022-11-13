@@ -2,8 +2,13 @@
 body{
     background-color:#ed1b76;
     background-position: center;
-    text-align: center;
     border-radius: 20px;
+    
+}
+
+.logo{
+    position: relative;
+    left:19%;
 }
 
 #gameCanvas{
@@ -38,6 +43,10 @@ body{
     cursor: pointer;
 }
 
+.timer_button{
+    visibility: hidden;
+}
+
 .game_button{
     transition: transform 300ms ease-in;
 }
@@ -55,8 +64,28 @@ body{
     font-size: 32px ;
     border-radius: 100%;
     text-align: center;
+    visibility: hidden;
 }
 
+.right-container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+.instruction-container{
+    border: 3px solid white;
+    width:300px;
+    height:410px;
+    border-radius:20px ;
+    font-size: 30px;
+    color: white;
+    margin: auto;
+    font-family: "fantasy", 'Courier New', Courier, monospace;
+    text-align: center;
+
+}
 
 .right-inside-container{
  display: flex;
@@ -103,6 +132,7 @@ body{
 .pop-up-hide{
     display: none;
 }
+
 
 
 

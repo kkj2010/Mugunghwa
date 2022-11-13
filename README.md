@@ -1,6 +1,6 @@
-# Welcome to Hibiscus flowers bloomed!(title can be changed)
+# Mugunghwa!(title can be changed)
 
-######  Why Hibiscus flowers bloomed?
+######  Why Mugunghwa?
 **Mugunghwa kkoci pieot seumnida** also known as  __"Red Light, Green Light"__ from Squid Game on Netflix, is a childhood game widely played in South Korea. The song of "mugunghwa kkoci pieot seumnida" plays during the game. The 'mugunghwa' (hibiscus) is not only the national flower of South Korea but also the meaning of my name. In the song, “kkoci pieot seumnida” means that the flower has bloomed. 
 
 ## Description
@@ -25,7 +25,7 @@ Your goal is to get your player to the finish line. The "it" person will stand a
 
 ## Implementation Timeline
 * 11/11- 11/13
-- [ ] Research Canvas and make a project skeleton
+- [] Research Canvas and make a project skeleton
 - [ ] Collect images will be used
 - [ ] Set characters movement- player & reward at main game area
 
