@@ -3,22 +3,32 @@ body{
     background-color:#ed1b76;
     background-position: center;
     border-radius: 20px;
-    
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .logo{
-    position: relative;
-    left:19%;
+    
+    padding-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 27%;
+   
+  
 }
 
 #gameCanvas{
     background-color: white;
     margin:20px;
     border-radius: 20px;
+    position: relative;
 }
 
 .whole-layout{
     display: flex;
+    justify-content: center;
+   
 }
 
 .left-inside-container{
@@ -45,26 +55,37 @@ body{
 
 .timer_button{
     visibility: hidden;
+    font-size: 20px;
+    text-align:center;
 }
 
 .game_button{
     transition: transform 300ms ease-in;
+    /* width: 0px;
+    height: 0px;
+    border-bottom:calc(180px*1.732) solid #249f9c;
+    border-left:180px solid transparent;
+    border-right:180px solid transparent; */
+
 }
 
 .game_button:hover{
     transform: scale(1.1);
 }
 
-.timer_button{
-    text-align:center;
-    font-size:32px;
-}
 
 .reward_button{
-    font-size: 32px ;
+    font-size: 20px ;
     border-radius: 100%;
     text-align: center;
     visibility: hidden;
+
+}
+
+
+.linkedin_button{
+    border-radius: 100%;
+    text-align: center;
 }
 
 .right-container{
@@ -76,7 +97,7 @@ body{
 
 .instruction-container{
     border: 3px solid white;
-    width:300px;
+    width:400px;
     height:410px;
     border-radius:20px ;
     font-size: 30px;
@@ -102,16 +123,20 @@ body{
 }
 
 .pop-up{
-    display: block;;
+    display: block;
+    z-index: 1;
     width:400px;
-    height:140px;
+    height:100px;
     padding:20px;
     background-color: black;
     color:white;
     text-align: center;
-    margin:auto;
-    transform: translateY(-150%);
-    opacity: 0.5;
+    margin: auto;
+    position: absolute;
+    transform: translateX(100%);
+    transform: translateY(-250%);
+    left: 33%;
+    opacity: 0.3;
     border-radius: 20px;
 }
 
@@ -133,6 +158,10 @@ body{
     display: none;
 }
 
+audio{
+    width: 100px;
+    height: 20px;
+}
 
 
 

@@ -25,17 +25,17 @@ Your goal is to get your player to the finish line. The "it" person will stand a
 
 ## Implementation Timeline
 * 11/11- 11/13
-- [] Research Canvas and make a project skeleton
+- [ ] Research Canvas and make a project skeleton
 - [ ] Collect images will be used
 - [ ] Set characters movement- player & reward at main game area
 
 * 11/14
-- [ ] Add functions for the robot girl
-- [ ] Set up music
-- [ ] Set the layout of top and bottom
+- [ ] Add layout for robot girl
+- [ ] Add functions for the robot girl & music
 
 * 11/15
-- [ ] Pop up 
+- [ ] Pop up for start & puase
+- [ ] Add music funcion
 - [ ] Create buttons at side & light
 
 * 11/16
