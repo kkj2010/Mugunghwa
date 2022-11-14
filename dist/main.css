@@ -6,8 +6,8 @@ body{
     background-color:#ed1b76;
     background-position: center;
     border-radius: 20px;
-    overflow-x: hidden;
-    overflow-y: hidden;
+    /* overflow-x: hidden;
+    overflow-y: hidden; */
 }
 
 .logo{
@@ -72,6 +72,7 @@ body{
 
 }
 
+
 .game_button:hover{
     transform: scale(1.1);
 }
@@ -89,6 +90,10 @@ body{
 .linkedin_button{
     border-radius: 100%;
     text-align: center;
+    /* width: 0; height: 0;
+border-left: 10px solid transparent;
+border-right: 10px solid transparent;
+border-bottom: 20px solid red; */
 }
 
 .right-container{

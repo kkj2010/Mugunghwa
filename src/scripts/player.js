@@ -27,18 +27,17 @@ class Player {
       this.canvasGame
         .getContext("2d")
         .drawImage(playerImage, this.x, this.y, 45, 55);
-    }// }}
+    }; // }}
   }
 
   update(e) {
     this.canvasGame
-    // .save()
-    .getContext("2d")
-    // .getImageData()
-    .clearRect(this.x, this.y, 45,55)
+      // .save()
+      .getContext("2d")
+      // .getImageData()
+      .clearRect(this.x, this.y, 45, 55);
     // .restore();
     // .putImageData()
-
 
     if (e.keyCode === LEFT_ARROW) {
       this.x -= 7;
@@ -48,7 +47,7 @@ class Player {
       this.draw();
     } else if (e.keyCode === RIGHT_ARROW) {
       this.x += 7;
-      if (this.x >= 400) {
+      if (this.x >= 450) {
         this.x -= 7;
       }
       this.draw();
@@ -76,7 +75,5 @@ class Player {
     window.addEventListener("keyup", () => (this.keys[event.keyCode] = false));
   }
 }
-
-
 
 export default Player;

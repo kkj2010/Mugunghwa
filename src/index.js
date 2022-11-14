@@ -9,8 +9,7 @@ canvasGame.height = 700;
 const backgroundImage = new Image();
 backgroundImage.src = "./img/background.png";
 backgroundImage.onload = () => {
-
-ctxGame.drawImage(backgroundImage, 0, 0);
+  ctxGame.drawImage(backgroundImage, 0, 0);
 };
 
 const robot = new Robot(185, 27, canvasGame);
@@ -70,6 +69,18 @@ function stopGame() {
 function finishGame(win) {
   hideGameButton();
   showPopUp(win ? "YOU WIN" : "YOU LOST");
+}
+
+function animateRobot() {
+
+}
+
+function drawBack(){
+  setInterval(robot.drawBack(), Math.random()*(3000-1000)+1000);
+}
+
+function drawFront(){
+  setInterval(robot.draw(), Math.random()*(3000-1000)+1000);
 }
 
 function showStopbutton() {
