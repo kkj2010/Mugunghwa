@@ -1,11 +1,15 @@
 import Player from "./scripts/player.js";
 import Robot from "./scripts/robot.js";
 
+
+
 const canvasGame = document.getElementById("gameCanvas");
 const ctxGame = canvasGame.getContext("2d");
 canvasGame.width = 500;
 canvasGame.height = 700;
 
+// let player= new Player()
+// new GameView(ctx, 
 const backgroundImage = new Image();
 backgroundImage.src = "./img/background.png";
 backgroundImage.onload = () => {
