@@ -1,5 +1,3 @@
-import { construct } from "core-js/fn/reflect";
-
 class GameView {
   constructor(ctx, game) {
     this.ctx = ctx;
@@ -11,6 +9,8 @@ class GameView {
   }
   animate() {
     this.game.draw(this.ctx);
+    // this.game.robot.animateRobot(this.ctx);
+    requestAnimationFrame(this.animate.bind(this));
   }
 }
 export default GameView;

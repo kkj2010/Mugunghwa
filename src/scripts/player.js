@@ -4,18 +4,20 @@ const UP_ARROW = 38;
 const DOWN_ARROW = 40;
 
 class Player {
-  constructor(x, y, canvasGame) {
+  constructor(x, y) {
     this.x = x;
     this.y = y;
-    this.maxWidth = canvasGame.width;
-    this.maxHeight = canvasGame.height;
-    this.canvasGame = canvasGame;
+    // this.canvasGame = canvasGame;
     this.keys = {};
+    this.playerImage = new Image();
+    this.playerImage.src = "./img/player.png";
+
+
   }
 
-  draw() {
-    const playerImage = new Image();
-    playerImage.src = "./img/player.png";
+  draw(ctx) {
+    // const playerImage = new Image();
+    // playerImage.src = "./img/player.png";
     // if (x && y){
     //   playerImage.onload = () => {
     //     this.canvasGame
@@ -23,49 +25,48 @@ class Player {
     //       .drawImage(playerImage, x, y, 100, 100);
     //   };
     // }else{
-    playerImage.onload = () => {
-      this.canvasGame
-        .getContext("2d")
-        .drawImage(playerImage, this.x, this.y, 45, 55);
-    }; // }}
+      ctx.drawImage(this.playerImage, this.x, this.y, 45, 55);
+    // console.log(ctx);
+
+     // }}
   }
 
   update(e) {
-    this.canvasGame
-      // .save()
-      .getContext("2d")
-      // .getImageData()
-      .clearRect(this.x, this.y, 45, 55);
-    // .restore();
-    // .putImageData()
-
     if (e.keyCode === LEFT_ARROW) {
       this.x -= 7;
       if (this.x <= 0) {
         this.x += 7;
       }
-      this.draw();
     } else if (e.keyCode === RIGHT_ARROW) {
       this.x += 7;
       if (this.x >= 450) {
         this.x -= 7;
       }
-      this.draw();
     }
     if (e.keyCode === UP_ARROW) {
       this.y -= 7;
       if (this.y <= 0) {
         this.y += 7;
       }
-      this.draw();
     } else if (e.keyCode === DOWN_ARROW) {
       this.y += 7;
       if (this.y >= 600) {
         this.y -= 7;
       }
-      this.draw();
     }
   }
+
+// // function playerCollision(){
+// //   if (!started){
+// //     return
+// //   }
+// //   //if collision between player & coin
+// //     coin.remove();
+// //     score++
+// //     updateScoreBoard()
+// // }
+
+
 
   playerListener() {
     window.addEventListener(

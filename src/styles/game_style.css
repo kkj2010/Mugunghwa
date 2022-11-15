@@ -13,9 +13,8 @@ body{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 27%;
+    width: 37%;
    
-  
 }
 
 #gameCanvas{
@@ -44,7 +43,7 @@ body{
  margin-top: 20px;
 }
 
-.game_button, .timer_button,.reward_button,.linkedin_button,.github_button,.mute_music{
+.game_button, .timer_button,.reward_button,.linkedin_button,.mute_music,.github_button{
     width:60px;
     height:60px ;
     background-color: #249f9c;
@@ -53,10 +52,15 @@ body{
     cursor: pointer;
 }
 
+
 .timer_button{
     visibility: hidden;
     font-size: 20px;
     text-align:center;
+}
+
+.github_button{
+
 }
 
 .game_button{
@@ -140,7 +144,7 @@ border-bottom: 20px solid red; */
     position: absolute;
     transform: translateX(100%);
     transform: translateY(-250%);
-    left: 33%;
+    left:26%;
     opacity: 0.3;
     border-radius: 20px;
 }
