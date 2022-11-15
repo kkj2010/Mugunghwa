@@ -4,8 +4,10 @@ class Robot {
     this.y = y;
     this.robotImage = new Image();
     this.robotImage.src = "./img/robotf.png";
-    this.robotBackImage = new Image();
-    this.robotBackImage.src = "./img/robotb.png";
+    // this.robotBackImage = new Image();
+    // this.robotBackImage.src = "./img/robotb.png";
+
+    this.robotStatus = true;
   }
 
   draw(ctx) {
@@ -15,28 +17,33 @@ class Robot {
     ctx.drawImage(this.robotImage, this.x, this.y, 130, 170);
   }
 
-  drawBack(ctx) {
-    // const robotBackImage = new Image();
-    // robotBackImage.src = "./img/robotb.png";
-
-    // robotImage.onload = () => {
-    //   this.canvasGame
-    //     .getContext("2d")
-    ctx.drawImage(this.robotBackImage, this.x, this.y, 130, 170);
+  start() {
+    // setInterval(this.animateRobot.bind(this), 3000);
+    let timeOut = 2000;
+    setTimeout(this.animateRobot.bind(this), timeOut);
   }
 
-  animateRobot(ctx) {
-    let displayImage = this.robotImage;
-    //check current robot image
-    if (displayImage.src.match("./img/robotf.png")) {
-      displayImage.src = "./img/robotb.png";
-      setInterval(() => this.drawBack(ctx), 2000);
+  // drawBack(ctx) {
+  //   // const robotBackImage = new Image();
+  //   // robotBackImage.src = "./img/robotb.png";
+
+  //   // robotImage.onload = () => {
+  //   //   this.canvasGame
+  //   //     .getContext("2d")
+  //   ctx.drawImage(this.robotBackImage, this.x, this.y, 130, 170);
+  // }
+
+  animateRobot() {
+    if (this.robotStatus) {
+      this.robotImage.src = "./img/robotb.png";
+
     } else {
-      displayImage.src = "./img/robotf.png";
-      setInterval(() => this.draw(ctx), 4000);
-      //  Math.random()*(3000-1000)+100);
+      this.robotImage.src = "./img/robotf.png";
     }
+    this.robotStatus = !this.robotStatus;
+    this.start()
   }
+
 }
 
 export default Robot;

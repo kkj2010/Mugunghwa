@@ -10,7 +10,7 @@ canvasGame.width = 500;
 canvasGame.height = 700;
 let game = new Game();
 new GameView(ctxGame, game).start();
-let robot= new Robot(130,170)
+let robot = new Robot(130, 170);
 
 // let player= new Player()
 //
@@ -66,7 +66,7 @@ popUpRefresh.addEventListener("click", () => {
 
 function playSound(sound) {
   sound.play();
-  sound.loop=true;
+  sound.loop = true;
 }
 
 function stopSound(sound) {
@@ -74,7 +74,6 @@ function stopSound(sound) {
 }
 
 function startGame() {
-  robot.animateRobot(ctxGame)
   initGame();
   showStopbutton();
   showTimerAndScore();
@@ -84,7 +83,7 @@ function startGame() {
 
 function stopGame() {
   stopGameTimer();
-  stopSound(backgroundSound)
+  stopSound(backgroundSound);
   hideGameButton();
   showPopUp("REPLAY?");
 }
@@ -92,7 +91,7 @@ function stopGame() {
 function finishGame(win) {
   hideGameButton();
   showPopUp(win ? "YOU WIN" : "YOU LOST");
-  stopSound(backgroundSound)
+  stopSound(backgroundSound);
 }
 
 function showStopbutton() {
@@ -186,7 +185,6 @@ function initGame() {
 //     };
 //   }
 // }
-
 
 // // function updateScoreBoard(){
 // //   gameScore.innerText= MONEY_COUNT- score;

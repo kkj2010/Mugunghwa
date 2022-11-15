@@ -12,11 +12,11 @@ body{
 
 .logo{
     
-    padding-top: 20px;
+    padding-top: 15px;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 37%;
+    width: 46%;
    
 }
 
@@ -46,7 +46,7 @@ body{
  margin-top: 20px;
 }
 
-.game_button, .timer_button,.reward_button,.linkedin_button,.mute_music,.github_button{
+.game_button, .timer_button,.reward_button,.linkedin_button,.mute_music{
     width:60px;
     height:60px ;
     background-color: #249f9c;
@@ -62,9 +62,6 @@ body{
     text-align:center;
 }
 
-.github_button{
-
-}
 
 .game_button{
     transition: transform 300ms ease-in;

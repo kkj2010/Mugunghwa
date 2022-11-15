@@ -25,7 +25,7 @@ class Player {
     //       .drawImage(playerImage, x, y, 100, 100);
     //   };
     // }else{
-      ctx.drawImage(this.playerImage, this.x, this.y, 45, 55);
+      ctx.drawImage(this.playerImage, this.x, this.y, 50, 60);
     // console.log(ctx);
 
      // }}
