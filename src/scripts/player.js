@@ -7,28 +7,13 @@ class Player {
   constructor(x, y) {
     this.x = x;
     this.y = y;
-    // this.canvasGame = canvasGame;
     this.keys = {};
     this.playerImage = new Image();
     this.playerImage.src = "./img/player.png";
-
-
   }
 
   draw(ctx) {
-    // const playerImage = new Image();
-    // playerImage.src = "./img/player.png";
-    // if (x && y){
-    //   playerImage.onload = () => {
-    //     this.canvasGame
-    //       .getContext("2d")
-    //       .drawImage(playerImage, x, y, 100, 100);
-    //   };
-    // }else{
-      ctx.drawImage(this.playerImage, this.x, this.y, 50, 60);
-    // console.log(ctx);
-
-     // }}
+    ctx.drawImage(this.playerImage, this.x, this.y, 50, 60);
   }
 
   update(e) {
@@ -56,17 +41,15 @@ class Player {
     }
   }
 
-// // function playerCollision(){
-// //   if (!started){
-// //     return
-// //   }
-// //   //if collision between player & coin
-// //     coin.remove();
-// //     score++
-// //     updateScoreBoard()
-// // }
-
-
+  // // function playerCollision(){
+  // //   if (!started){
+  // //     return
+  // //   }
+  // //   //if collision between player & coin
+  // //     coin.remove();
+  // //     score++
+  // //     updateScoreBoard()
+  // // }
 
   playerListener() {
     window.addEventListener(

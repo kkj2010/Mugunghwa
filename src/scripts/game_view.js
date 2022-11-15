@@ -9,7 +9,6 @@ class GameView {
   }
   animate() {
     this.game.draw(this.ctx);
-    // this.game.robot.animateRobot(this.ctx);
     requestAnimationFrame(this.animate.bind(this));
   }
 }

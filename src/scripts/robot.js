@@ -4,16 +4,10 @@ class Robot {
     this.y = y;
     this.robotImage = new Image();
     this.robotImage.src = "./img/robotf.png";
-    // this.robotBackImage = new Image();
-    // this.robotBackImage.src = "./img/robotb.png";
-
     this.robotStatus = true;
   }
 
   draw(ctx) {
-    // const robotImage = new Image();
-    // robotImage.src = "./img/robotf.png";
-
     ctx.drawImage(this.robotImage, this.x, this.y, 130, 170);
   }
 
@@ -36,14 +30,12 @@ class Robot {
   animateRobot() {
     if (this.robotStatus) {
       this.robotImage.src = "./img/robotb.png";
-
     } else {
       this.robotImage.src = "./img/robotf.png";
     }
     this.robotStatus = !this.robotStatus;
-    this.start()
+    this.start();
   }
-
 }
 
 export default Robot;
