@@ -43,7 +43,7 @@ body{
  margin-top: 20px;
 }
 
-.game_button, .timer_button,.reward_button,.linkedin_button,.mute_music{
+.game_button, .timer_button,.reward_button,.linkedin_button,.read_me{
     width:60px;
     height:60px ;
     background-color: #249f9c;
@@ -51,6 +51,7 @@ body{
     margin:10px;
     cursor: pointer;
 }
+
 
 
 .timer_button{
@@ -71,7 +72,7 @@ body{
 }
 
 
-.game_button:hover{
+.game_button, .linkedin_button,.fa-brands:hover{
     transform: scale(1.1);
 }
 
@@ -84,14 +85,29 @@ body{
 
 }
 
+.left-container.img{
+    display: relative;
+}
+.left-container .fa-brands.fa-linkedin{
+    position: relative;
+    /* bottom:20;
+    left:35%; */
+  
+}
+.fa-brands{
+    color:black
+}
 
+
+.left-container .fa-brands.fa-github{
+    top:20%;
+    left:16%;
+    position:absolute;
+    width:15px;
+    height: 15px;
+}
 .linkedin_button{
     border-radius: 100%;
-    text-align: center;
-    /* width: 0; height: 0;
-border-left: 10px solid transparent;
-border-right: 10px solid transparent;
-border-bottom: 20px solid red; */
 }
 
 .right-container{
@@ -103,6 +119,7 @@ border-bottom: 20px solid red; */
 
 .instruction-container{
     border: 3px solid white;
+    font-weight: bold;
     width:400px;
     height:410px;
     border-radius:20px ;
@@ -127,6 +144,7 @@ border-bottom: 20px solid red; */
  border-radius: 20px;
  margin-top: 20px;
 }
+
 
 .pop-up{
     display: block;

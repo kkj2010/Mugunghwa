@@ -10,6 +10,8 @@ class Player {
     this.keys = {};
     this.playerImage = new Image();
     this.playerImage.src = "./img/player.png";
+    this.height= 50;
+    this.width= 60;
   }
 
   draw(ctx) {
@@ -41,23 +43,13 @@ class Player {
     }
   }
 
-  // // function playerCollision(){
-  // //   if (!started){
-  // //     return
-  // //   }
-  // //   //if collision between player & coin
-  // //     coin.remove();
-  // //     score++
-  // //     updateScoreBoard()
-  // // }
-
-  playerListener() {
-    window.addEventListener(
-      "keydown",
-      (event) => (this.keys[event.keyCode] = true)
-    );
-    window.addEventListener("keyup", () => (this.keys[event.keyCode] = false));
-  }
+  // playerListener() {
+  //   window.addEventListener(
+  //     "keydown",
+  //     (event) => (this.keys[event.keyCode] = true)
+  //   );
+  //   window.addEventListener("keyup", () => (this.keys[event.keyCode] = false));
+  // }
 }
 
 export default Player;

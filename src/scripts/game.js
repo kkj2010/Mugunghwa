@@ -3,9 +3,30 @@ import Robot from "./robot.js";
 import Coin from "./coin.js";
 import Villain from "./villain.js";
 import Line from "./line.js";
+import PopUp from "./popup.js";
 
 class Game {
-  constructor() {
+  constructor(gameDuration, coinCount) {
+
+    this.coins = [];
+    this.gameBtn = document.querySelector(".game_button");
+    this.gameTimer = document.querySelector(".timer_button");
+    this.gameScore = document.querySelector(".reward_button");
+    this.backgroundSound = new Audio("./sound/redlightgreenlight.mp3");
+    this.started = false;
+    this.score = 0;
+    this.timer = undefined;
+    this.gameDuration = gameDuration;
+    this.coinCount = coinCount;
+    this.gameBtn.addEventListener("click", () => {
+      if (this.started) {
+        this.stopGame();
+      } else {
+        this.start();
+      }
+      this.started = !this.started;
+    });
+    this.popup = new PopUp(); //not sure how this work.
     this.player = new Player(225, 630);
     this.robot = new Robot(190, 17);
     this.robotBack = new Robot(190, 20);
@@ -15,7 +36,6 @@ class Game {
     this.backgroundImage = new Image();
     this.backgroundImage.src = "./img/background.png";
 
-    this.coins = [];
   }
 
   draw(ctx) {
@@ -30,21 +50,97 @@ class Game {
   }
 
   start() {
-    this.setupCoins();
-    window.addEventListener("keydown", (event) => {
+    // console.log("1")
+    // this.setupCoins();
+    // console.log("2")
+
+    const finishGameEvent = (event) => {
       this.player.update(event);
-    });
+      if (this.collisiononFinalLine()) {
+        this.finishGame(true);
+        window.removeEventListener("keydown", finishGameEvent);
+
+      }
+      this.coins.forEach((coin) => {
+        if (this.collisionCoin(coin)) {
+          coin.remove();
+          this.score++;
+          this.updateScoreBoard;
+        }
+      });
+    }
+
+    window.addEventListener("keydown", finishGameEvent);
+
     this.robot.start();
+    this.initGame();
+    this.showStopbutton();
+    this.showTimerAndScore();
+    this.startGameTimer(finishGameEvent);
+    this.playSound(this.backgroundSound);
   }
 
-  win() {}
+  stopGame() {
+    // this.robot.stop
+    this.stopGameTimer();
+    this.stopSound(this.backgroundSound);
+    this.hideGameButton();
+    this.popup.showPopUp("REPLAY?");
+  }
+
+
+  finishGame(win) {
+    // debugger;
+    this.robot.stop();
+    this.stopGameTimer();
+    this.hideGameButton();
+    this.stopSound(this.backgroundSound);
+    this.popup.showPopUp(win ? "YOU WIN" : "YOU LOST");
+  }
+
+  initGame() {
+    // this.showGameButton();
+    this.gameScore.innerText = this.coinCount;
+  }
+
+  collisiononFinalLine() {
+    // debugger;
+    let crash = false;
+    if (this.player.x >= this.player.x + this.finalline.width) {
+      crash = true; //no collision
+    } else if (this.player.x + this.player.width <= this.finalline.x) {
+      crash = true;
+    } else if (this.player.y >= this.finalline.y + this.finalline.height) {
+      crash = true;
+    } else if (this.player.y + this.player.height <= this.finalline.y) {
+      crash = true;
+    }
+    return crash;
+  }
+
+  updateScoreBoard() {
+    this.gameScore.innerText = this.coinCount - this.score;
+  }
+
+  collisionCoin(coin) {
+    //how do i get coin.x y?
+    let crash = true;
+    if (this.player.x >= this.player.x + coin.width) {
+      crash = false; //no collision
+    } else if (this.player.x + this.player.width <= coin.x) {
+      crash = false;
+    } else if (this.player.y >= this.coin.y + coin.height) {
+      crash = false;
+    } else if (this.player.y + this.player.height <= coin.y) {
+      crash = false;
+    }
+  }
 
   setupCoins() {
     this.coins = [];
     let x = 0;
     let y = 0;
-    while (this.coins.length < 10) {
-      // for (let i = 0; i < 8; i++) {
+    while (this.coins.length < 12) {
       x = Math.random() * (400 - 0) + 0;
       y = Math.max(250, Math.random() * (500 - 0) + 0);
       var coin = new Coin(x, y);
@@ -65,8 +161,51 @@ class Game {
     }
   }
 
-  playSound() {
-    this.sing.play();
+  playSound(sound) {
+    sound.play();
+    sound.loop = true;
+  }
+  stopSound(sound) {
+    sound.pause();
+  }
+  showStopbutton() {
+    let icon = this.gameBtn.querySelector(".fas");
+    icon.classList.add("fa-stop");
+    icon.classList.remove("fa-play");
+    this.gameBtn.style.visibility = "visible";
+  }
+  hideGameButton() {
+    this.gameBtn.style.visibility = "hidden";
+  }
+
+  showTimerAndScore() {
+    this.gameTimer.style.visibility = "visible";
+    this.gameScore.style.visibility = "visible";
+  }
+
+  startGameTimer(finishGameEvent) {
+    let remainingTimeSec = this.gameDuration;
+    this.updateTimerText(remainingTimeSec);
+    this.timer = setInterval(() => {
+      //setInterval:시간 간격마다 함수 실행
+      if (remainingTimeSec <= 0) {
+        clearInterval(this.timer); //설정된 함수종료
+        window.removeEventListener("keydown", finishGameEvent);
+        this.finishGame(false);
+        return; //아래코드 실행 하면안됨.
+      }
+      this.updateTimerText(--remainingTimeSec);
+    }, 1000);
+  }
+
+  stopGameTimer() {
+    clearInterval(this.timer);
+  }
+
+  updateTimerText(sec) {
+    const minutes = Math.floor(sec / 60);
+    const seconds = sec % 60;
+    this.gameTimer.innerText = `${minutes}:${seconds}`;
   }
 }
 

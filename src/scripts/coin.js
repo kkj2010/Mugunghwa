@@ -4,6 +4,8 @@ class Coin {
     this.y = y;
     this.coinImage = new Image();
     this.coinImage.src = "./img/coin.png";
+    this.height= 30;
+    this.weight= 30;
   }
 
   draw(ctx) {

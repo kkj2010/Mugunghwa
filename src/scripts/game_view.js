@@ -7,6 +7,8 @@ class GameView {
   start() {
     requestAnimationFrame(this.animate.bind(this)); // 60times/sec
   }
+
+
   animate() {
     this.game.draw(this.ctx);
     requestAnimationFrame(this.animate.bind(this));

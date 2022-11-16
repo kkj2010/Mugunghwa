@@ -14,17 +14,17 @@ class Robot {
   start() {
     // setInterval(this.animateRobot.bind(this), 3000);
     let timeOut = 2000;
-    setTimeout(this.animateRobot.bind(this), timeOut);
+    this.intervalId = setTimeout(this.animateRobot.bind(this), timeOut);
   }
 
-  // drawBack(ctx) {
-  //   // const robotBackImage = new Image();
-  //   // robotBackImage.src = "./img/robotb.png";
 
-  //   // robotImage.onload = () => {
-  //   //   this.canvasGame
-  //   //     .getContext("2d")
-  //   ctx.drawImage(this.robotBackImage, this.x, this.y, 130, 170);
+  stop() {
+    clearTimeout(this.intervalId);
+  }
+
+  // stop() {
+  //   timer=  setTimeout(this.animateRobot.bind(this), 2000);
+  //   clearTimeout(timer);
   // }
 
   animateRobot() {

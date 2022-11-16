@@ -4,6 +4,8 @@ class Line {
     this.y = y;
     this.lineImage = new Image();
     this.lineImage.src = "./img/finishline.png";
+    this.height= 700;
+    this.weight= 20;
   }
 
   draw(ctx) {
