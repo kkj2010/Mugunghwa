@@ -5,7 +5,7 @@
   />
 </a>
 
-# MUGUGHWA
+# MUGUNGHWA
 
 ###### Why Mugunghwa?
 
@@ -37,7 +37,7 @@ The character can only move in the main game area.
 * Move when the "it" at the finishline looks back.
 
 
-## TECHNOLOGIES, LIBRARIES, APIS
+## TECHNOLOGIES, LIBRARIES & APIS
 * JavaScript as the logic and game source code
 * HTML Canvas to render the game
 * CSS for styling
