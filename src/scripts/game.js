@@ -125,15 +125,8 @@ class Game {
     if (this.player.x >= coin.x + coin.width) {
       crash = false; //no collision
     } else if (this.player.x + this.player.width <= coin.x) {
-<<<<<<< HEAD
-      // left
       crash = false;
     } else if (this.player.y >= coin.y + coin.height) {
-      //right
-=======
-      crash = false;
-    } else if (this.player.y >= coin.y + coin.height) {
->>>>>>> game_view
       crash = false;
     } else if (this.player.y + this.player.height <= coin.y) {
       crash = false;
