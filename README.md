@@ -12,12 +12,12 @@
   />
 </a>
 
-<a>
+<!-- <a>
   <img 
     src="./img/squid3.png"
     alt="logo" height="40" align="right"
   />
-</a>
+</a> -->
 
 # MUGUNGHWA
 
