@@ -5,7 +5,6 @@
   />
 </a>
 
-<<<<<<< HEAD
 <a>
   <img 
     src="./img/squid2.png"
@@ -20,8 +19,6 @@
   />
 </a>
 
-=======
->>>>>>> game_view
 # MUGUNGHWA
 
 ###### Why Mugunghwa?
