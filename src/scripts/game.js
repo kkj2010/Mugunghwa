@@ -49,7 +49,7 @@ class Game {
 
   start() {
     const finishGameEvent = (event) => {
-      this.player.update(event)
+      this.player.update(event);
       if (this.player.update(event) && this.robot.robotFront) {
         this.finishGame(false);
         window.removeEventListener("keydown", finishGameEvent);
@@ -129,7 +129,6 @@ class Game {
     // debugger;
 
     let crash = true;
-    console.log(this.player.x, coin.x + coin.width);
 
     if (this.player.x >= coin.x + coin.width) {
       crash = false; //no collision
