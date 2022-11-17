@@ -1,11 +1,25 @@
 <a>
   <img 
-    src="./img/title.png"
+    src="./img/squid1.png"
     alt="logo" height="40" align="right"
   />
 </a>
 
-# MUGUGHWA
+<a>
+  <img 
+    src="./img/squid2.png"
+    alt="logo" height="40" align="right"
+  />
+</a>
+
+<a>
+  <img 
+    src="./img/squid3.png"
+    alt="logo" height="40" align="right"
+  />
+</a>
+
+# MUGUNGHWA
 
 ###### Why Mugunghwa?
 
