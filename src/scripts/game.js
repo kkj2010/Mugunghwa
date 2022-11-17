@@ -7,7 +7,6 @@ import PopUp from "./popup.js";
 
 class Game {
   constructor(gameDuration, coinCount) {
-
     this.coins = [];
     this.gameBtn = document.querySelector(".game_button");
     this.gameTimer = document.querySelector(".timer_button");
@@ -26,7 +25,7 @@ class Game {
       }
       this.started = !this.started;
     });
-    this.popup = new PopUp(); //not sure how this work.
+    this.popup = new PopUp();
     this.player = new Player(225, 630);
     this.robot = new Robot(190, 17);
     this.robotBack = new Robot(190, 20);
@@ -35,7 +34,6 @@ class Game {
     this.finalline = new Line(0, 195);
     this.backgroundImage = new Image();
     this.backgroundImage.src = "./img/background.png";
-
   }
 
   draw(ctx) {
@@ -50,28 +48,24 @@ class Game {
   }
 
   start() {
-    // console.log("1")
-    // this.setupCoins();
-    // console.log("2")
-
     const finishGameEvent = (event) => {
       this.player.update(event);
       if (this.collisiononFinalLine()) {
         this.finishGame(true);
         window.removeEventListener("keydown", finishGameEvent);
-
       }
-      this.coins.forEach((coin) => {
+      this.coins.forEach((coin, index) => {
         if (this.collisionCoin(coin)) {
-          coin.remove();
+          // delete coin.coinImage;
+          this.coins.splice(index,1);
           this.score++;
-          this.updateScoreBoard;
+          this.updateScoreBoard();
         }
       });
-    }
+    };
 
     window.addEventListener("keydown", finishGameEvent);
-
+    this.setupCoins();
     this.robot.start();
     this.initGame();
     this.showStopbutton();
@@ -87,7 +81,6 @@ class Game {
     this.hideGameButton();
     this.popup.showPopUp("REPLAY?");
   }
-
 
   finishGame(win) {
     // debugger;
@@ -119,28 +112,41 @@ class Game {
   }
 
   updateScoreBoard() {
+   debugger
     this.gameScore.innerText = this.coinCount - this.score;
   }
 
+  deleteCoin(coin){
+    this.coins.delete()
+  }
+
   collisionCoin(coin) {
-    //how do i get coin.x y?
+    // debugger;
+
     let crash = true;
-    if (this.player.x >= this.player.x + coin.width) {
+    console.log(this.player.x,coin.x + coin.width)
+
+    if(this.player.x >= coin.x + coin.width) {
       crash = false; //no collision
-    } else if (this.player.x + this.player.width <= coin.x) {
+    } else if (this.player.x + this.player.width <= coin.x) {  // left
+      // debugger;
       crash = false;
-    } else if (this.player.y >= this.coin.y + coin.height) {
+    } else if (this.player.y >= coin.y + coin.height) {   //right
+      // debugger
       crash = false;
     } else if (this.player.y + this.player.height <= coin.y) {
+      // debugger;
       crash = false;
     }
+    // debugger;
+    return crash;
   }
 
   setupCoins() {
     this.coins = [];
     let x = 0;
     let y = 0;
-    while (this.coins.length < 12) {
+    while (this.coins.length < 9) {
       x = Math.random() * (400 - 0) + 0;
       y = Math.max(250, Math.random() * (500 - 0) + 0);
       var coin = new Coin(x, y);

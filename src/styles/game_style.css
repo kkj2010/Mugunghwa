@@ -3,18 +3,13 @@ body{
     background-color:#ed1b76;
     background-position: center;
     border-radius: 20px;
-    /* overflow-x: hidden;
-    overflow-y: hidden; */
+    overflow-x: hidden;
+    overflow-y: hidden; 
 }
 
 .logo{
-    
-    padding-top: 15px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 46%;
-   
+    position: relative;
+    left: 27%;
 }
 
 #gameCanvas{
@@ -27,7 +22,6 @@ body{
 .whole-layout{
     display: flex;
     justify-content: center;
-   
 }
 
 .left-inside-container{
@@ -53,7 +47,6 @@ body{
 }
 
 
-
 .timer_button{
     visibility: hidden;
     font-size: 20px;
@@ -61,19 +54,9 @@ body{
 }
 
 
-.game_button{
-    transition: transform 300ms ease-in;
-    /* width: 0px;
-    height: 0px;
-    border-bottom:calc(180px*1.732) solid #249f9c;
-    border-left:180px solid transparent;
-    border-right:180px solid transparent; */
-
-}
-
-
 .game_button, .linkedin_button,.fa-brands:hover{
     transform: scale(1.1);
+    transition: transform 300ms ease-in;
 }
 
 
@@ -82,30 +65,30 @@ body{
     border-radius: 100%;
     text-align: center;
     visibility: hidden;
-
 }
 
 .left-container.img{
     display: relative;
 }
+
 .left-container .fa-brands.fa-linkedin{
     position: relative;
     /* bottom:20;
     left:35%; */
-  
 }
+
 .fa-brands{
     color:black
 }
 
-
-.left-container .fa-brands.fa-github{
-    top:20%;
+.fa-brands.fa-github{
+    top:19.5%;
     left:16%;
     position:absolute;
-    width:15px;
-    height: 15px;
+    width:12px;
+    height: 12px;
 }
+
 .linkedin_button{
     border-radius: 100%;
 }
@@ -119,17 +102,38 @@ body{
 
 .instruction-container{
     border: 3px solid white;
-    font-weight: bold;
     width:400px;
     height:410px;
     border-radius:20px ;
-    font-size: 30px;
-    color: white;
-    margin: auto;
+    font-size: 20px;
+    color: black;
+    /* margin: auto; */
     font-family: "fantasy", 'Courier New', Courier, monospace;
-    text-align: center;
+}
+
+.instruction-logo{
+    position: relative;
+    left:17%;
+    padding: 10px;
 
 }
+
+.arrow{
+    position: relative;
+    left:5%
+}
+
+audio{
+    position: relative;
+    left:40%;
+    width: 100px;
+    height: 20px;
+}
+
+.explanation{
+    padding: 3px;
+}
+
 
 .right-inside-container{
  display: flex;
@@ -182,10 +186,7 @@ body{
     display: none;
 }
 
-audio{
-    width: 100px;
-    height: 20px;
-}
+
 
 
 

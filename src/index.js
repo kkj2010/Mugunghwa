@@ -7,7 +7,7 @@ const canvasGame = document.getElementById("gameCanvas");
 const ctxGame = canvasGame.getContext("2d");
 canvasGame.width = 500;
 canvasGame.height = 700;
-let game = new Game(20,8);
+let game = new Game(60,9);
 new GameView(ctxGame, game).start();
 
 
