@@ -13,6 +13,7 @@ body{
 .logo{
     position: relative;
     left: 27%;
+    /* left:34% */
 }
 
 #gameCanvas{
@@ -87,6 +88,8 @@ body{
 .fa-brands.fa-github{
     top:18%;
     left:16%;
+     /* top:15%;
+    left:24.8%; */
     position:absolute;
     width:10px;
     height:10px;
@@ -189,16 +192,44 @@ audio{
     display: none;
 }
 
-.explanation1{
+.explanation1,.explanation8{
     font-size: 20px;
     text-align: center;
     font-weight: bold;
+    color: white;
 }
 
 
-.explanation2,.explanation3,.explanation4,.explanation5,.explanation6,.explanation7,.explanation8,.explanation9{
+.explanation2,.explanation3,.explanation4{
     font-size: 15px;
     text-align: center;
+    color: white;
+
+}
+.explanation5,.explanation6,.explanation7{
+    font-size: 15px;
+   text-align: center;
+   color:white;
+}
+
+
+
+.host{
+    position:relative;
+    bottom:3%;
+    left:45%
+}
+
+.villianLeft{
+    position:relative;
+    bottom:3%;
+    left:20% 
+}
+
+.villianRight{
+    position:relative;
+    bottom:3%;
+    left:35% 
 }
 /*!*************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!

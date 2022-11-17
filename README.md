@@ -1,45 +1,71 @@
-# Mugunghwa!
+<a>
+  <img 
+    src="./img/title.png"
+    alt="logo" height="40" align="right"
+  />
+</a>
 
-######  Why Mugunghwa?
+# MUGUGHWA
+
+###### Why Mugunghwa?
+
 **Mugunghwa kkoci pieot seumnida** also known as  __"Red Light, Green Light"__ from Squid Game on Netflix, is a childhood game widely played in South Korea. The song of "mugunghwa kkoci pieot seumnida" plays during the game. The 'mugunghwa' (hibiscus) is not only the national flower of South Korea but also the meaning of my name. In the song, “kkoci pieot seumnida” means that the flower has bloomed. 
 
-## Description
-In the original game, the "it" person sings the song and as soon as they finish singing, they look back and the players must not move. In this game, both aspects of both versions (Korean and American) were combined: the red/green light and the representatitve song.
 
-Your goal is to get your player to the finish line. The "it" person will stand at the finish line. The player can only move when the "it" person doesn't look back and the light is green. When the player stops moving, the music will stop. The speed at which the "it" player or the red light changes it not consistent every time. Therefore, the player won't be able to predict when to move.
+## DESCRIPTION
+In the original game, the "it" person sings the song and as soon as they finish singing, they look back and the players must not move. In this game, your goal is to get your player to the finish line and collect as many coins as possible on the way. The "it" person will stand at the finish line. The player can only move when the "it" person doesn't look back. The speed at which the "it" is not consistent every time. Therefore, the player won't be able to predict when to move.
 
-## Functionalities and MVPs
+![Mugunghwa](./img/layout.png)
+
+
+## LIVE
+Play [here](https://kkj2010.github.io/Javascript-Project/)!
+
+
+## FUNCTIONALITIES AND MVPS 
+In MUGUNGHWA, the user will be able to:
 * Start and restart the game.
-* Set a timer with a time limit to finish the game.
-* Use the keys to move chracter.
-* Collect rewards after reaching the finish line. 
+* Pressing a specific arrow key causes the character to move at a set speed in that direction.
+The character can only move in the main game area.
 
-## Technologies, Libraries, APIs
+![code](./img/codemovement.png)
+* Every time a new game starts, coins were specified at a certain distance so that the positions where they were placed did not overlap.
+
+![code](./img/codecoin.png)
+* Collect coins on the way to the finish line 
+* See how many coins left in scoreboard.
+* Move when the "it" at the finishline looks back.
+
+
+## TECHNOLOGIES, LIBRARIES, APIS
 * JavaScript as the logic and game source code
 * HTML Canvas to render the game
 * CSS for styling
 * Webpack
 
-<!-- ## Wireframe
-![This is an image](wire.png) -->
+
+## WIREFRAME
+![This is an image](./img/wireframe.png)
+
 
 ## Implementation Timeline
 * 11/11- 11/13
 - [ ] Research Canvas and make a project skeleton
 - [ ] Collect images will be used
-- [ ] Set characters movement- player & reward at main game area
+- [ ] Set player movement
 
 * 11/14
 - [ ] Add layout for robot girl
-- [ ] Add functions for the robot girl & music
+- [ ] Set up pop and all other buttons
 
 * 11/15
-- [ ] Pop up for start & puase
+- [ ] Add functions for the robot girl 
 - [ ] Add music funcion
-- [ ] Create buttons at side & light
 
 * 11/16
 - [ ] Add links, instructions, and other functionality to game website
+- [ ] Add functions that the player can collect coins 
+- [ ] Add functions that the player win the game when he arrives final line
 - [ ] Debugging, styling, and final touches
 
 * 11/17

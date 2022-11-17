@@ -48,14 +48,6 @@ class Player {
     }
     return moved;
   }
-
-  // playerListener() {
-  //   window.addEventListener(
-  //     "keydown",
-  //     (event) => (this.keys[event.keyCode] = true)
-  //   );
-  //   window.addEventListener("keyup", () => (this.keys[event.keyCode] = false));
-  // }
 }
 
 export default Player;

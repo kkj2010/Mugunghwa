@@ -12,20 +12,13 @@ class Robot {
   }
 
   start() {
-    // setInterval(this.animateRobot.bind(this), 3000);
     let timeOut = 2000;
     this.intervalId = setTimeout(this.animateRobot.bind(this), timeOut);
   }
 
-
   stop() {
     clearTimeout(this.intervalId);
   }
-
-  // stop() {
-  //   timer=  setTimeout(this.animateRobot.bind(this), 2000);
-  //   clearTimeout(timer);
-  // }
 
   animateRobot() {
     if (this.robotFront) {

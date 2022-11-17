@@ -61,7 +61,6 @@ class Game {
       }
       this.coins.forEach((coin, index) => {
         if (this.collisionCoin(coin)) {
-          // delete coin.coinImage;
           this.coins.splice(index, 1);
           this.score++;
           this.updateScoreBoard();
@@ -80,7 +79,6 @@ class Game {
   }
 
   stopGame() {
-    // this.robot.stop
     this.stopGameTimer();
     this.stopSound(this.backgroundSound);
     this.hideGameButton();
@@ -88,7 +86,6 @@ class Game {
   }
 
   finishGame(win) {
-    // debugger;
     this.robot.stop();
     this.stopGameTimer();
     this.hideGameButton();
@@ -98,12 +95,10 @@ class Game {
   }
 
   initGame() {
-    // this.showGameButton();
     this.gameScore.innerText = this.coinCount;
   }
 
   collisiononFinalLine() {
-    // debugger;
     let crash = false;
     if (this.player.x >= this.player.x + this.finalline.width) {
       crash = true; //no collision
@@ -126,26 +121,18 @@ class Game {
   }
 
   collisionCoin(coin) {
-    // debugger;
-
     let crash = true;
     console.log(this.player.x, coin.x + coin.width);
 
     if (this.player.x >= coin.x + coin.width) {
       crash = false; //no collision
     } else if (this.player.x + this.player.width <= coin.x) {
-      // left
-      // debugger;
       crash = false;
     } else if (this.player.y >= coin.y + coin.height) {
-      //right
-      // debugger
       crash = false;
     } else if (this.player.y + this.player.height <= coin.y) {
-      // debugger;
       crash = false;
     }
-    // debugger;
     return crash;
   }
 
@@ -200,12 +187,11 @@ class Game {
     let remainingTimeSec = this.gameDuration;
     this.updateTimerText(remainingTimeSec);
     this.timer = setInterval(() => {
-      //setInterval:시간 간격마다 함수 실행
       if (remainingTimeSec <= 0) {
-        clearInterval(this.timer); //설정된 함수종료
+        clearInterval(this.timer);
         window.removeEventListener("keydown", finishGameEvent);
         this.finishGame(false);
-        return; //아래코드 실행 하면안됨.
+        return; 
       }
       this.updateTimerText(--remainingTimeSec);
     }, 1000);
