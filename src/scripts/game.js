@@ -61,7 +61,6 @@ class Game {
       }
       this.coins.forEach((coin, index) => {
         if (this.collisionCoin(coin)) {
-          // delete coin.coinImage;
           this.coins.splice(index, 1);
           this.score++;
           this.updateScoreBoard();
@@ -80,7 +79,6 @@ class Game {
   }
 
   stopGame() {
-    // this.robot.stop
     this.stopGameTimer();
     this.stopSound(this.backgroundSound);
     this.hideGameButton();
@@ -96,7 +94,6 @@ class Game {
   }
 
   initGame() {
-    // this.showGameButton();
     this.gameScore.innerText = this.coinCount;
   }
 
@@ -128,10 +125,15 @@ class Game {
     if (this.player.x >= coin.x + coin.width) {
       crash = false; //no collision
     } else if (this.player.x + this.player.width <= coin.x) {
+<<<<<<< HEAD
       // left
       crash = false;
     } else if (this.player.y >= coin.y + coin.height) {
       //right
+=======
+      crash = false;
+    } else if (this.player.y >= coin.y + coin.height) {
+>>>>>>> game_view
       crash = false;
     } else if (this.player.y + this.player.height <= coin.y) {
       crash = false;
@@ -190,12 +192,11 @@ class Game {
     let remainingTimeSec = this.gameDuration;
     this.updateTimerText(remainingTimeSec);
     this.timer = setInterval(() => {
-      //setInterval:시간 간격마다 함수 실행
       if (remainingTimeSec <= 0) {
-        clearInterval(this.timer); //설정된 함수종료
+        clearInterval(this.timer);
         window.removeEventListener("keydown", finishGameEvent);
         this.finishGame(false);
-        return; //아래코드 실행 하면안됨.
+        return; 
       }
       this.updateTimerText(--remainingTimeSec);
     }, 1000);

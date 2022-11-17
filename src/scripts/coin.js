@@ -10,7 +10,6 @@ class Coin {
 
   draw(ctx) {
     if (this.coinImage) {
-
       ctx.drawImage(this.coinImage, this.x, this.y, 30, 30);
     }
   }
