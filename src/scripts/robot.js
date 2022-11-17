@@ -12,7 +12,8 @@ class Robot {
   }
 
   start() {
-    let timeOut = 2000;
+    let timeOut = Math.max(2000, Math.random() * (4000 - 0) + 0);
+    // 2000;
     this.intervalId = setTimeout(this.animateRobot.bind(this), timeOut);
   }
 
