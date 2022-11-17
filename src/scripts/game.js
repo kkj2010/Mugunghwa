@@ -88,12 +88,10 @@ class Game {
   }
 
   finishGame(win) {
-    // debugger;
     this.robot.stop();
     this.stopGameTimer();
     this.hideGameButton();
     this.stopSound(this.backgroundSound);
-    debugger;
     this.popup.showPopUp(win ? "YOU WIN" : "YOU LOST");
   }
 
@@ -103,7 +101,6 @@ class Game {
   }
 
   collisiononFinalLine() {
-    // debugger;
     let crash = false;
     if (this.player.x >= this.player.x + this.finalline.width) {
       crash = true; //no collision
@@ -126,25 +123,19 @@ class Game {
   }
 
   collisionCoin(coin) {
-    // debugger;
-
     let crash = true;
 
     if (this.player.x >= coin.x + coin.width) {
       crash = false; //no collision
     } else if (this.player.x + this.player.width <= coin.x) {
       // left
-      // debugger;
       crash = false;
     } else if (this.player.y >= coin.y + coin.height) {
       //right
-      // debugger
       crash = false;
     } else if (this.player.y + this.player.height <= coin.y) {
-      // debugger;
       crash = false;
     }
-    // debugger;
     return crash;
   }
 
