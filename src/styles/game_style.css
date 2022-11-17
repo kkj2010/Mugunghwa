@@ -3,8 +3,8 @@ body{
     background-color:#ed1b76;
     background-position: center;
     border-radius: 20px;
-    /* overflow-x: hidden;
-    overflow-y: hidden;  */
+    overflow-x: hidden;
+    /* overflow-y: hidden;  */
 }
 
 .logo{
@@ -82,11 +82,11 @@ body{
 }
 
 .fa-brands.fa-github{
-    top:19.5%;
+    top:18%;
     left:16%;
     position:absolute;
-    width:12px;
-    height: 12px;
+    width:10px;
+    height:10px;
 }
 
 .linkedin_button{
@@ -108,7 +108,7 @@ body{
     font-size: 20px;
     color: black;
     /* margin: auto; */
-    font-family: "fantasy", 'Courier New', Courier, monospace;
+    font-family: "fantasy", 'copperplate';
 }
 
 .instruction-logo{
@@ -144,9 +144,9 @@ audio{
  justify-content: space-around; 
  border: 3px solid white;
  width: 100;
- height: 300;
+ height: 350;
  border-radius: 20px;
- margin-top: 20px;
+ margin-top: 5px;
 }
 
 
@@ -162,7 +162,7 @@ audio{
     margin: auto;
     position: absolute;
     /* transform: translateX(100%); */
-    /* transform: translateY(-250%); */
+    transform: translateY(220%);
     left:26%;
     opacity: 0.3;
     border-radius: 20px;
@@ -186,7 +186,14 @@ audio{
     display: none;
 }
 
+.explanation1{
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+}
 
 
-
-
+.explanation2,.explanation3,.explanation4,.explanation5,.explanation6,.explanation7,.explanation8,.explanation9{
+    font-size: 15px;
+    text-align: center;
+}

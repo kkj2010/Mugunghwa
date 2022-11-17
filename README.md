@@ -1,4 +1,4 @@
-# Mugunghwa!(title can be changed)
+# Mugunghwa!
 
 ######  Why Mugunghwa?
 **Mugunghwa kkoci pieot seumnida** also known as  __"Red Light, Green Light"__ from Squid Game on Netflix, is a childhood game widely played in South Korea. The song of "mugunghwa kkoci pieot seumnida" plays during the game. The 'mugunghwa' (hibiscus) is not only the national flower of South Korea but also the meaning of my name. In the song, “kkoci pieot seumnida” means that the flower has bloomed. 
