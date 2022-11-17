@@ -19,28 +19,34 @@ class Player {
   }
 
   update(e) {
+    let moved = false;
     if (e.keyCode === LEFT_ARROW) {
+      moved = true;
       this.x -= 7;
       if (this.x <= 0) {
         this.x += 7;
       }
     } else if (e.keyCode === RIGHT_ARROW) {
+      moved = true;
       this.x += 7;
       if (this.x >= 450) {
         this.x -= 7;
       }
     }
     if (e.keyCode === UP_ARROW) {
+      moved = true;
       this.y -= 7;
       if (this.y <= 0) {
         this.y += 7;
       }
     } else if (e.keyCode === DOWN_ARROW) {
+      moved = true;
       this.y += 7;
       if (this.y >= 600) {
         this.y -= 7;
       }
     }
+    return moved;
   }
 
   // playerListener() {

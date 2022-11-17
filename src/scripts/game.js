@@ -49,7 +49,12 @@ class Game {
 
   start() {
     const finishGameEvent = (event) => {
-      this.player.update(event);
+      this.player.update(event)
+      if (this.player.update(event) && this.robot.robotFront) {
+        this.finishGame(false);
+        window.removeEventListener("keydown", finishGameEvent);
+      }
+
       if (this.collisiononFinalLine()) {
         this.finishGame(true);
         window.removeEventListener("keydown", finishGameEvent);
@@ -57,7 +62,7 @@ class Game {
       this.coins.forEach((coin, index) => {
         if (this.collisionCoin(coin)) {
           // delete coin.coinImage;
-          this.coins.splice(index,1);
+          this.coins.splice(index, 1);
           this.score++;
           this.updateScoreBoard();
         }
@@ -88,6 +93,7 @@ class Game {
     this.stopGameTimer();
     this.hideGameButton();
     this.stopSound(this.backgroundSound);
+    debugger;
     this.popup.showPopUp(win ? "YOU WIN" : "YOU LOST");
   }
 
@@ -112,26 +118,27 @@ class Game {
   }
 
   updateScoreBoard() {
-   debugger
     this.gameScore.innerText = this.coinCount - this.score;
   }
 
-  deleteCoin(coin){
-    this.coins.delete()
+  deleteCoin(coin) {
+    this.coins.delete();
   }
 
   collisionCoin(coin) {
     // debugger;
 
     let crash = true;
-    console.log(this.player.x,coin.x + coin.width)
+    console.log(this.player.x, coin.x + coin.width);
 
-    if(this.player.x >= coin.x + coin.width) {
+    if (this.player.x >= coin.x + coin.width) {
       crash = false; //no collision
-    } else if (this.player.x + this.player.width <= coin.x) {  // left
+    } else if (this.player.x + this.player.width <= coin.x) {
+      // left
       // debugger;
       crash = false;
-    } else if (this.player.y >= coin.y + coin.height) {   //right
+    } else if (this.player.y >= coin.y + coin.height) {
+      //right
       // debugger
       crash = false;
     } else if (this.player.y + this.player.height <= coin.y) {

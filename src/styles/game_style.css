@@ -3,8 +3,8 @@ body{
     background-color:#ed1b76;
     background-position: center;
     border-radius: 20px;
-    overflow-x: hidden;
-    overflow-y: hidden; 
+    /* overflow-x: hidden;
+    overflow-y: hidden;  */
 }
 
 .logo{
@@ -161,8 +161,8 @@ audio{
     text-align: center;
     margin: auto;
     position: absolute;
-    transform: translateX(100%);
-    transform: translateY(-250%);
+    /* transform: translateX(100%); */
+    /* transform: translateY(-250%); */
     left:26%;
     opacity: 0.3;
     border-radius: 20px;
