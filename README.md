@@ -33,7 +33,7 @@ In the original game, the "it" person sings the song and as soon as they finish 
 
 
 ## LIVE
-Play [here](https://kkj2010.github.io/Javascript-Project/)!
+Play [here](https://kkj2010.github.io/Mugunghwa/)!
 
 
 ## FUNCTIONALITIES AND MVPS 
