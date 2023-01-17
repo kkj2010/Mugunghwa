@@ -1,6 +1,3 @@
-/*!*********************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/game_style.css ***!
-  \*********************************************************************************************************/
 body {
   background-color: #ed1b76;
   background-position: center;
@@ -18,7 +15,6 @@ body {
   /* margin-left: 20px; */
   margin-top: 20px;
   width: 500px;
-  position: relative;
 }
 
 #gameCanvas {
@@ -83,10 +79,6 @@ body {
   margin-top: 103px;
 }
 
-.tri {
-  margin-top: 5px;
-}
-
 .left-container.img {
   display: relative;
 }
@@ -102,8 +94,8 @@ body {
 }
 
 .fa-brands.fa-github {
-  top: 165px;
-  left: 97px;
+  top: 18%;
+  left: 16%;
   /* top:15%;
     left:24.8%; */
   position: absolute;
@@ -183,9 +175,7 @@ audio {
   position: absolute;
   /* transform: translateX(100%); */
   transform: translateY(220%);
-  left: 7%;
-  /* left: 80px; */
-  top: 100px;
+  left: 26%;
   opacity: 0.3;
   border-radius: 20px;
 }
@@ -248,8 +238,3 @@ audio {
   bottom: 3%;
   left: 35%;
 }
-
-/*!*************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
-  \*************************************************************************************************************************************/
-
