@@ -15,14 +15,14 @@
 
 
   <body>
-    
+    <div class="layout">
     <!-- <div class="logo"><img src="./img/title.png" width="400" height="80"></div> -->
     <div class="whole-layout">
 
       <div class="left-container">
         <div class="left-inside-container"> 
-          <a href="https://github.com/kkj2010"><img src="./img/triangle.png" width="70" height="60"><i class="fa-brands fa-github"></i></a>  
-          <a href="https://linkedin.com/in/kun-ju-kim-473374b4" target="_blank"><button class="linkedin_button"><i class="fa-brands fa-linkedin"></i></button></a>
+          <a href="https://github.com/kkj2010"><img src="./img/im.png" class="tri" width="70" height="60"></a>  
+          <a href="https://linkedin.com/in/kunjukim" target="_blank"><button class="linkedin_button"><i class="fa-brands fa-linkedin"></i></button></a>
           <a href="https://github.com/kkj2010/Javascript-Project" target="_blank"><button class="read_me"><i class="fa-solid fa-book-open-reader"></i></button></a>
 
         </div>
@@ -30,7 +30,14 @@
       </div>
       <div class="logo">
         <img src="./img/title.png" class="title" width="400" height="80">
-      <canvas id="gameCanvas" width="500" height="700"></canvas>
+      <canvas id="gameCanvas" width="500" height="700">
+      </canvas>
+      <section class="pop-up pop-up-hide">
+        <button class="pop-up-refresh">
+        <i class="fas fa-redo"></i>
+        </button>
+        <span class="pop-up-message">Are you sure want to replay?</span>
+      </section>
         </div>
       <div class="right-container">
       
@@ -61,13 +68,14 @@
          <img class="villianRight" src="./img/squid3.png" width="40" height="40">
       </div>
   </div>
+  </div>
 
-    <section class="pop-up pop-up-hide">
+    <!-- <section class="pop-up pop-up-hide">
       <button class="pop-up-refresh">
       <i class="fas fa-redo"></i>
       </button>
       <span class="pop-up-message">Are you sure want to replay?</span>
-    </section>
+    </section> -->
 </body>
 
 </html>
