@@ -3,7 +3,8 @@ class Robot {
     this.x = x;
     this.y = y;
     this.robotImage = new Image();
-    this.robotImage.src = "./img/robotf.png";
+    // this.robotImage.src = "./img/robotf.png";
+    this.robotImage.src = "./img/robotb.png";
     this.robotFront = true;
   }
 
@@ -23,9 +24,9 @@ class Robot {
 
   animateRobot() {
     if (this.robotFront) {
-      this.robotImage.src = "./img/robotb.png";
-    } else {
       this.robotImage.src = "./img/robotf.png";
+    } else {
+      this.robotImage.src = "./img/robotb.png";
     }
     this.robotFront = !this.robotFront;
     this.start();

@@ -183,7 +183,8 @@ audio {
   position: absolute;
   /* transform: translateX(100%); */
   transform: translateY(220%);
-  left: 26%;
+  /* left: 26%; */
+  left:370px;
   opacity: 0.3;
   border-radius: 20px;
 }
