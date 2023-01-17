@@ -4,8 +4,8 @@ class Robot {
     this.y = y;
     this.robotImage = new Image();
     // this.robotImage.src = "./img/robotf.png";
-    this.robotImage.src = "./img/robotb.png";
     this.robotFront = false;
+    this.robotImage.src = "./img/robotb.png";
   }
 
   draw(ctx) {
@@ -24,6 +24,7 @@ class Robot {
 
   animateRobot() {
     if (this.robotFront) {
+    
       this.robotImage.src = "./img/robotb.png";
     } else {
       this.robotImage.src = "./img/robotf.png";

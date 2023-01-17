@@ -2,9 +2,13 @@ body {
   background-color: #ed1b76;
   background-position: center;
   border-radius: 20px;
-  overflow-x: hidden;
-  /* overflow-y: hidden;  */
+  /* overflow-x: hidden; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
+
 
 .title {
   padding-left: 50px;
@@ -25,9 +29,11 @@ body {
   /* position: relative; */
 }
 
+
 .whole-layout {
   display: flex;
-  justify-content: space-around;
+  width: 1200px;
+  justify-content: space-around;  
 }
 
 .left-inside-container {
@@ -94,9 +100,11 @@ body {
     left:35%; */
 }
 
-.fa-brands {
+.fa-brands, .fa-solid {
   color: black;
+  font-size: 18px;
 }
+
 
 .fa-brands.fa-github {
   top: 165px;
