@@ -1,236 +1,247 @@
 /*!*********************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/game_style.css ***!
   \*********************************************************************************************************/
-
-body{
-    background-color:#ed1b76;
-    background-position: center;
-    border-radius: 20px;
-    overflow-x: hidden;
-    /* overflow-y: hidden;  */
+body {
+  background-color: #ed1b76;
+  background-position: center;
+  border-radius: 20px;
+  overflow-x: hidden;
+  /* overflow-y: hidden;  */
 }
 
-.logo{
-    position: relative;
-    left: 27%;
-    /* left:34% */
+.title {
+  padding-left: 50px;
 }
 
-#gameCanvas{
-    background-color: white;
-    margin:20px;
-    border-radius: 20px;
-    position: relative;
+.logo {
+  /* margin: 20px; */
+  /* margin-left: 20px; */
+  margin-top: 20px;
+  width: 500px;
 }
 
-.whole-layout{
-    display: flex;
-    justify-content: center;
+#gameCanvas {
+  background-color: white;
+  margin-top: 20px;
+  border-radius: 20px;
+  /* position: relative; */
 }
 
-.left-inside-container{
- display: flex;
- width:10vw;
- flex-direction: column;
- align-items: center;
- flex-wrap: nowrap;
- justify-content: space-around; 
- border: 3px solid white;
- border-radius: 20px;
- font-size: 20px;
- margin-top: 20px;
+.whole-layout {
+  display: flex;
+  justify-content: space-around;
 }
 
-.game_button, .timer_button,.reward_button,.linkedin_button,.read_me{
-    width:60px;
-    height:60px ;
-    background-color: #249f9c;
-    border: 2px solid white;
-    margin:10px;
-    cursor: pointer;
+.left-inside-container {
+  display: flex;
+  width: 10vw;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  border: 3px solid white;
+  border-radius: 20px;
+  font-size: 20px;
+  margin-top: 20px;
 }
 
-
-.timer_button{
-    visibility: hidden;
-    font-size: 20px;
-    text-align:center;
+.game_button,
+.timer_button,
+.reward_button,
+.linkedin_button,
+.read_me {
+  width: 60px;
+  height: 60px;
+  background-color: #249f9c;
+  border: 2px solid white;
+  margin: 10px;
+  cursor: pointer;
 }
 
-
-.game_button, .linkedin_button,.fa-brands:hover{
-    transform: scale(1.1);
-    transition: transform 300ms ease-in;
+.timer_button {
+  visibility: hidden;
+  font-size: 20px;
+  text-align: center;
 }
 
-
-.reward_button{
-    font-size: 20px ;
-    border-radius: 100%;
-    text-align: center;
-    visibility: hidden;
+.game_button,
+.linkedin_button,
+.fa-brands:hover {
+  transform: scale(1.1);
+  transition: transform 300ms ease-in;
 }
 
-.left-container.img{
-    display: relative;
+.reward_button {
+  font-size: 20px;
+  border-radius: 100%;
+  text-align: center;
+  visibility: hidden;
 }
 
-.left-container .fa-brands.fa-linkedin{
-    position: relative;
-    /* bottom:20;
+.left-container {
+  margin-top: 103px;
+}
+
+.left-container.img {
+  display: relative;
+}
+
+.left-container .fa-brands.fa-linkedin {
+  position: relative;
+  /* bottom:20;
     left:35%; */
 }
 
-.fa-brands{
-    color:black
+.fa-brands {
+  color: black;
 }
 
-.fa-brands.fa-github{
-    top:18%;
-    left:16%;
-     /* top:15%;
+.fa-brands.fa-github {
+  top: 18%;
+  left: 16%;
+  /* top:15%;
     left:24.8%; */
-    position:absolute;
-    width:10px;
-    height:10px;
+  position: absolute;
+  width: 10px;
+  height: 10px;
 }
 
-.linkedin_button{
-    border-radius: 100%;
+.linkedin_button {
+  border-radius: 100%;
 }
 
-.right-container{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: space-around;
+.right-container {
+  display: flex;
+  margin-top: 110px;
+  flex-direction: column;
+  /* flex-wrap: nowrap; */
+  justify-content: space-around;
 }
 
-.instruction-container{
-    border: 3px solid white;
-    width:400px;
-    height:410px;
-    border-radius:20px ;
-    font-size: 20px;
-    color: black;
-    /* margin: auto; */
-    font-family: "fantasy", 'copperplate';
+.instruction-container {
+  border: 3px solid white;
+  width: 400px;
+  height: 410px;
+  border-radius: 20px;
+  font-size: 20px;
+  color: black;
+  /* margin: auto; */
+  font-family: "fantasy", "copperplate";
 }
 
-.instruction-logo{
-    position: relative;
-    left:17%;
-    padding: 10px;
-
+.instruction-logo {
+  position: relative;
+  left: 17%;
+  padding: 10px;
 }
 
-.arrow{
-    position: relative;
-    left:5%
+.arrow {
+  position: relative;
+  left: 5%;
 }
 
-audio{
-    position: relative;
-    left:40%;
-    width: 100px;
-    height: 20px;
+audio {
+  position: relative;
+  left: 40%;
+  width: 100px;
+  height: 20px;
 }
 
-.explanation{
-    padding: 3px;
+.explanation {
+  padding: 3px;
 }
 
-
-.right-inside-container{
- display: flex;
- width:10vw;
- flex-direction: column;
- align-items: center;
- flex-wrap: nowrap;
- justify-content: space-around; 
- border: 3px solid white;
- width: 100;
- height: 350;
- border-radius: 20px;
- margin-top: 5px;
+.right-inside-container {
+  display: flex;
+  width: 10vw;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  border: 3px solid white;
+  width: 100;
+  height: 350;
+  border-radius: 20px;
+  /* margin-top: 5px; */
 }
 
-
-.pop-up{
-    display: block;
-    z-index: 1;
-    width:400px;
-    height:100px;
-    padding:20px;
-    background-color: black;
-    color:white;
-    text-align: center;
-    margin: auto;
-    position: absolute;
-    /* transform: translateX(100%); */
-    transform: translateY(220%);
-    left:26%;
-    opacity: 0.3;
-    border-radius: 20px;
+.pop-up {
+  display: block;
+  z-index: 1;
+  width: 400px;
+  height: 100px;
+  padding: 20px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  margin: auto;
+  position: absolute;
+  /* transform: translateX(100%); */
+  transform: translateY(220%);
+  left: 26%;
+  opacity: 0.3;
+  border-radius: 20px;
 }
 
-.pop-up-refresh{
-    width:60px;
-    height: 60px;
-    font-size: 24px;
-    background-color: white;
-    border:2px solid black;
-    border-radius: 50%;
+.pop-up-refresh {
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 50%;
 }
 
-.pop-up-message{
-    display: block;
-    font-size: 38px;
+.pop-up-message {
+  display: block;
+  font-size: 38px;
 }
 
-.pop-up-hide{
-    display: none;
+.pop-up-hide {
+  display: none;
 }
 
-.explanation1,.explanation8{
-    font-size: 20px;
-    text-align: center;
-    font-weight: bold;
-    color: white;
+.explanation1,
+.explanation8 {
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  color: white;
 }
 
-
-.explanation2,.explanation3,.explanation4{
-    font-size: 15px;
-    text-align: center;
-    color: white;
-
+.explanation2,
+.explanation3,
+.explanation4 {
+  font-size: 15px;
+  text-align: center;
+  color: white;
 }
-.explanation5,.explanation6,.explanation7{
-    font-size: 15px;
-   text-align: center;
-   color:white;
-}
-
-
-
-.host{
-    position:relative;
-    bottom:3%;
-    left:45%
+.explanation5,
+.explanation6,
+.explanation7 {
+  font-size: 15px;
+  text-align: center;
+  color: white;
 }
 
-.villianLeft{
-    position:relative;
-    bottom:3%;
-    left:20% 
+.host {
+  position: relative;
+  bottom: 3%;
+  left: 45%;
 }
 
-.villianRight{
-    position:relative;
-    bottom:3%;
-    left:35% 
+.villianLeft {
+  position: relative;
+  bottom: 3%;
+  left: 20%;
 }
+
+.villianRight {
+  position: relative;
+  bottom: 3%;
+  left: 35%;
+}
+
 /*!*************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
   \*************************************************************************************************************************************/
