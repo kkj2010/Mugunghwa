@@ -9,7 +9,6 @@ body {
   height: 100vh;
 }
 
-
 .title {
   padding-left: 50px;
 }
@@ -29,11 +28,10 @@ body {
   /* position: relative; */
 }
 
-
 .whole-layout {
   display: flex;
   width: 1200px;
-  justify-content: space-around;  
+  justify-content: space-around;
 }
 
 .left-inside-container {
@@ -49,9 +47,6 @@ body {
   margin-top: 20px;
 }
 
-.game_button,
-.timer_button,
-.reward_button,
 .linkedin_button,
 .read_me {
   width: 60px;
@@ -62,10 +57,44 @@ body {
   cursor: pointer;
 }
 
+.game_button,
+.timer_button
+ {
+  width: 53px;
+  height: 53px;
+  background-color: #249f9c;
+  border: 2px solid white;
+  margin: 10px;
+  cursor: pointer;
+}
+.reward_button
+ {
+  width: 60px;
+  height: 60px;
+  background-color: #249f9c;
+  border: 2px solid white;
+  margin:5px;
+  cursor: pointer;
+  font-size: 30px;
+  border-radius: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  visibility: hidden;
+  /* padding-top: 20px; */
+}
+
+
 .timer_button {
   visibility: hidden;
   font-size: 20px;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .game_button,
@@ -73,14 +102,13 @@ body {
 .fa-brands:hover {
   transform: scale(1.1);
   transition: transform 300ms ease-in;
+  font-size: 15px;
 }
 
-.reward_button {
-  font-size: 20px;
-  border-radius: 100%;
-  text-align: center;
-  visibility: hidden;
+.fa-play {
+  font-size: 15px;
 }
+
 
 .left-container {
   margin-top: 103px;
@@ -100,11 +128,11 @@ body {
     left:35%; */
 }
 
-.fa-brands, .fa-solid {
+.fa-brands,
+.fa-solid {
   color: black;
   font-size: 18px;
 }
-
 
 .fa-brands.fa-github {
   top: 165px;

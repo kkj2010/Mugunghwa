@@ -82,7 +82,7 @@ class Game {
     this.stopGameTimer();
     this.stopSound(this.backgroundSound);
     this.hideGameButton();
-    this.popup.showPopUp("REPLAY?");
+    this.popup.showPopUp("RE-START?");
   }
 
   finishGame(win) {
