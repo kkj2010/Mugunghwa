@@ -4,7 +4,7 @@ class PopUp {
     this.popUpText = document.querySelector(".pop-up-message");
     this.popUpRefresh = document.querySelector(".pop-up-refresh");
     this.popUpRefresh.addEventListener("click", () => {
-      window.location = "/";
+      window.location = "/Mugunghwa";
       this.onClick && this.onClick();
       this.hide();
     }); //onclick이 있을때만 얘를 호출

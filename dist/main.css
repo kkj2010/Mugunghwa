@@ -81,7 +81,12 @@ body {
   font-size: 30px;
   border-radius: 100%;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
   visibility: hidden;
+  /* padding-top: 20px; */
 }
 
 
@@ -89,6 +94,10 @@ body {
   visibility: hidden;
   font-size: 20px;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .game_button,
