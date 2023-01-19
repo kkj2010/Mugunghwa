@@ -60,8 +60,7 @@ body {
   cursor: pointer;
 }
 
-.game_button,
-.timer_button
+.game_button
  {
   width: 53px;
   height: 53px;
@@ -77,8 +76,7 @@ body {
   background-color: #249f9c;
   border: 2px solid white;
   margin:5px;
-  cursor: pointer;
-  font-size: 26px;
+  font-size: 23px;
   border-radius: 100%;
   text-align: center;
   display: flex;
@@ -91,6 +89,11 @@ body {
 
 
 .timer_button {
+  width: 53px;
+  height: 53px;
+  background-color: #249f9c;
+  border: 2px solid white;
+  margin: 10px;
   visibility: hidden;
   font-size: 20px;
   text-align: center;
@@ -100,13 +103,20 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.game_button,
+/* .game_button,
 .linkedin_button,
 .fa-brands:hover {
   transform: scale(1.1);
   transition: transform 300ms ease-in;
   font-size: 15px;
+} */
+
+.game_button:hover {
+  transform: scale(1.1);
+  transition: transform 300ms ease-in;
+  font-size: 15px;
 }
+
 
 .fa-play {
   font-size: 15px;
